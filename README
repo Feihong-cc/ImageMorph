@@ -1,0 +1,52 @@
+# Created for intoduction to CS course in the Hebrew University
+# Author: Alon Aviv, 2014
+
+
+=============================
+=  Description of program   =
+=============================
+
+This program creates a sequence morphing from one image
+to another. It recives from the user matching points on both source and
+target image, and fills both images with triangles according to those points,
+with each point the edge of a triangle, thus filling the entire screen. Each
+two new point the user marks must be inside two corresponding triangles on the
+source and target.
+
+The program then creates a series of images, with each image in line 
+presenting a change from the source image to the target image, thus creating
+a morphing sequence.
+ 
+Using the program gui.py, which uses ex7.py, will enable a user to select
+points on both source and target images, display the relevant triangles and 
+execute the morphing process.
+
+====================
+=  Usage for ex7 =
+====================
+
+python3 gui.py <image_source> <image_target> <num_frames> <out_dir> \
+<max_x> <max_y>
+
+Alternatly the program can be run without values:
+python3 gui.py
+
+In this case these default values will be used:
+image_source = im1.jpg
+image_target = im2.jpg
+num_frames = 40
+out_dir = "images"
+max_x = 500
+may_y = 350
+
+=============================
+=  Contains: =
+=============================
+
+ex7.py                         Functions executing a morphing sequence
+
+gui.py                         Graphical interface (file provided by the course)
+
+SolveLinear3.py				   Solves a 3X3 linear equation (file provided by the course)
+
+
